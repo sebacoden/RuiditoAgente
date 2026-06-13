@@ -1,0 +1,14 @@
+# Normalizacion de fin de linea para que los scripts funcionen en todos los SO.
+* text=auto
+
+# Shell y Python deben usar LF (CRLF rompe el shebang en Unix)
+*.sh  text eol=lf
+*.py  text eol=lf
+
+# PowerShell y batch usan CRLF
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binarios
+*.wav binary
