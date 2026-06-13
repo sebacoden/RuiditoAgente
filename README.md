@@ -98,13 +98,28 @@ powershell -ExecutionPolicy Bypass -File scripts/generate-default-sound.ps1
 
 ---
 
-## Probar sin un agente
+## Probar la notificación
+
+Para comprobar que suena y se ve el aviso **sin necesidad de un agente**, usá el
+script de prueba:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File core\notify.ps1 -Message "Prueba"   # Windows
+powershell -ExecutionPolicy Bypass -File test-notification.ps1   # Windows
 ```
 ```bash
-bash core/notify.sh --message "Prueba"                                        # macOS / Linux
+bash test-notification.sh                                        # macOS / Linux
+```
+
+Acepta las mismas opciones que el núcleo, por ejemplo probar otro sonido o solo el
+sonido:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File test-notification.ps1 -Sound "sounds\otro.mp3"
+powershell -ExecutionPolicy Bypass -File test-notification.ps1 -NoText   # solo sonido
+```
+```bash
+bash test-notification.sh --sound sounds/otro.mp3
+bash test-notification.sh --no-text   # solo sonido
 ```
 
 ---
@@ -126,7 +141,8 @@ RuiditoAgentes/
 ├── scripts/
 │   └── generate-default-sound.ps1   Genera el WAV por defecto
 ├── config.example.json       Plantilla de configuración
-└── examples/settings.json    Ejemplo de hook manual (Claude Code)
+├── examples/settings.json    Ejemplo de hook manual (Claude Code)
+└── test-notification.ps1/.sh Prueba la notificación sin un agente
 ```
 
 ---
@@ -139,7 +155,7 @@ RuiditoAgentes/
 | Windows bloquea el script | Usá `-ExecutionPolicy Bypass` (ya incluido en los adaptadores). |
 | No reproduce mp3/ogg en Linux | Instalá `ffmpeg` (`ffplay`) o `mpg123`/`pulseaudio-utils`. |
 | No aparece el texto en Linux | Instalá `libnotify-bin` (`notify-send`). |
-| Quiero probar el sonido | Ver la sección "Probar sin un agente". |
+| Quiero probar el sonido | Corré `test-notification` (ver "Probar la notificación"). |
 
 ---
 
