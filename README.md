@@ -1,5 +1,7 @@
 # 🔔 RuiditoAgentes
 
+🌍 **Idioma / Language**: **Español** · [English](README.en.md)
+
 Hace **ruido** (y muestra un aviso de texto) cada vez que tu **agente de IA** te
 pide permiso o necesita tu atención. Así no tenés que estar mirando la terminal.
 
