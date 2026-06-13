@@ -1,0 +1,10 @@
+# Backups que generan los instaladores
+*.bak
+
+# Config personal del usuario (se versiona config.example.json)
+config.json
+
+# Archivos de SO
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,8 @@
+{
+  "_comentario": "Copia este archivo como config.json (en la raiz del repo) y editalo. config.json tiene prioridad sobre los defaults. Las variables de entorno RUIDITO_* tienen prioridad sobre config.json.",
+
+  "sound": "sounds/notify.wav",
+  "message": "Tu agente necesita tu atencion",
+  "playSound": true,
+  "showText": true
+}

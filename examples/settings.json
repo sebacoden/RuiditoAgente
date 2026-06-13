@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -NoProfile -File \"C:\\ruta\\al\\repo\\RuiditoAgentes\\core\\notify.ps1\" -Message \"Claude Code necesita tu atencion\""
+          }
+        ]
+      }
+    ]
+  }
+}
